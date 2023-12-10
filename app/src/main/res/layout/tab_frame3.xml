@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:paddingTop="15pt"
         android:paddingBottom="15pt"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/anggo" />
 
     <TextView
         android:id="@+id/textView4"
@@ -21,7 +21,7 @@
         android:layout_height="100dp"
         android:textSize="20dp"
         android:gravity="center"
-        android:text="혜지짱" />
+        android:text="@string/nav_header_title" />
 
     <Button
         android:id="@+id/btnEditProfile"
