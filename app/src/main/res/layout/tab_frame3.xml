@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/frame3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#f2eb9b">
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:paddingTop="15pt"
+        android:paddingBottom="15pt"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="100sp"
+        android:textSize="20dp"
         android:gravity="center"
-        android:textSize="50px"
-        android:textColor="@color/black"
-        android:text="Tab3 == TextView3" />
+        android:text="@string/nav_header_title" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:textSize="23sp"
+        android:text="프로필 설정" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/mypageListview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
 </LinearLayout>
