@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:paddingTop="15pt"
         android:paddingBottom="15pt"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/anggo" />
 
     <TextView
         android:id="@+id/textView4"
