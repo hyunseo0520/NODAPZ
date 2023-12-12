@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WhoActivity">
+
+    <TextView
+        android:id="@+id/page_where"
+        style="@style/showtext4"
+        android:text="몇 명에서 여행을 떠나시나요?" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            android:id="@+id/button_decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/textView_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textSize="25dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/button_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_person"
+        android:layout_width="423dp"
+        android:layout_height="319dp"
+        android:layout_below="@id/button_increase"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="30dp"
+        android:src="@drawable/person1" />
+
+    <TextView
+        android:id="@+id/textView_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="\t⬇️\t선택한 카테고리\t⬇️\t"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text=""
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+        <EditText
+            android:id="@+id/editText_newCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:hint="\t새 카테고리" />
+
+        <Button
+            android:id="@+id/button_addCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\t\t카테고리 추가\t\t" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가족" />
+
+        <CheckBox
+            android:id="@+id/checkbox_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구" />
+
+        <CheckBox
+            android:id="@+id/checkbox_colleague"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동료" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_who"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="go to what"
+        android:textSize="30dp" />
+
+</LinearLayout>
