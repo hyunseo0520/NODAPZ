@@ -14,7 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -41,7 +41,7 @@ public class SignUp extends AppCompatActivity {
                     createUser(editTextEmail.getText().toString(), editTextPassword.getText().toString(), editTextName.getText().toString());
                 } else {
                     // 이메일과 비밀번호가 공백인 경우
-                    Toast.makeText(SignUp.this, "계정과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this, "계정과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -55,11 +55,11 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 회원가입 성공시
-                            Toast.makeText(SignUp.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
                             // 계정이 중복된 경우
-                            Toast.makeText(SignUp.this, "이미 존재하는 계정입니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "이미 존재하는 계정입니다.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

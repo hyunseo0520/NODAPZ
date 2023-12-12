@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-    Fragment fragment1, fragment2, fragment3, fragment4;
+    Fragment fragment1, fragment2, fragment3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
