@@ -57,11 +57,10 @@
         android:id="@+id/button_who"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_margin="20dp"
         android:text="여행자 정보 입력 및 확인하기"
         android:textSize="30dp" />
-
+  
     <Button
         android:id="@+id/button_next"
         style="@style/button3"

@@ -17,9 +17,7 @@ public class WhoActivity extends AppCompatActivity {
     private TextView textView_number;
     private Button button_increase, button_decrease;
     private ImageView imageView_person;
-    private Button btnWho;
-    private Button button_next;
-
+    private Button btnWho, btnNext;
     private static final int REQUEST_CODE_INPUT = 1;
 
     @Override
@@ -34,8 +32,8 @@ public class WhoActivity extends AppCompatActivity {
         button_decrease = findViewById(R.id.button_decrease);
         imageView_person = findViewById(R.id.imageView_person);
         btnWho = findViewById(R.id.button_who);
-        button_next = findViewById(R.id.button_next);
-        button_next.setEnabled(false); // 초기에 next 버튼 비활성화
+        btnNext = findViewById(R.id.button_page);
+        btnNext.setEnabled(false); // 초기에 next 버튼 비활성화
 
         btnWho.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +71,7 @@ public class WhoActivity extends AppCompatActivity {
         imageView_person.setImageResource(getResources().getIdentifier("person0", "drawable", getPackageName()));
         textView_number.setText(String.valueOf(number) + "명");
 
-        button_next.setOnClickListener(new View.OnClickListener() {
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WhoActivity.this, ConfirmActivity.class);
@@ -84,9 +82,9 @@ public class WhoActivity extends AppCompatActivity {
 
     private void updateNextButton() {
         if (number > 0) {
-            button_next.setEnabled(true); // 여행자 인원이 1명 이상이면 next 버튼 활성화
+            btnNext.setEnabled(true); // 여행자 인원이 1명 이상이면 next 버튼 활성화
         } else {
-            button_next.setEnabled(false); // 여행자 인원이 0명이면 next 버튼 비활성화
+            btnNext.setEnabled(false); // 여행자 인원이 0명이면 next 버튼 비활성화
         }
     }
 
@@ -96,7 +94,7 @@ public class WhoActivity extends AppCompatActivity {
             if (data != null) {
                 int inputCount = data.getIntExtra("inputCount", 0);
                 if (inputCount < number) {
-                    button_next.setEnabled(false); // 입력된 동승자 정보의 개수가 선택한 인원보다 작을 경우 next 버튼 비활성화
+                    btnNext.setEnabled(false); // 입력된 동승자 정보의 개수가 선택한 인원보다 작을 경우 next 버튼 비활성화
                 }
             }
         }
