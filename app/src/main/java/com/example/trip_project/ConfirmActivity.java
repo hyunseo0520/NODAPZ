@@ -1,5 +1,6 @@
 package com.example.trip_project;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -57,7 +58,7 @@ public class ConfirmActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //다음 액티비티로 가는 것
                 //Intent
-                Intent intent = new Intent(ConfirmActivity.this, MainActivity.class);
+                Intent intent = new Intent(ConfirmActivity.this, ChecklistActivity.class);
                 startActivity(intent);//다음 액티비티 화면에 출력
             }
         });
