@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WhenActivity extends AppCompatActivity {
     //Context로 다음 액티비티에서 정보 사용
-    public static Context DayContext;
+    public static Context WhenContext;
 
     RadioButton rdoStartCal, rdoEndCal;
     DatePicker dPicker1, dPicker2;
@@ -28,7 +28,7 @@ public class WhenActivity extends AppCompatActivity {
         setTitle("여행 기간을 입력하세요!");
 
         //컨텍스트 설정
-        DayContext = this;
+        WhenContext = this;
 
         // 라디오버튼 2개
         rdoStartCal = (RadioButton) findViewById(R.id.rdoStartCal);
