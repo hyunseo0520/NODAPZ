@@ -8,23 +8,23 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WhatActivity extends AppCompatActivity {
+public class ConfirmActivity extends AppCompatActivity {
 
-    Button btnConf; //다음 액티비티로 넘어가는 버튼
+    Button btnWhat; //다음 액티비티로 넘어가는 버튼
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_what);
+        setContentView(R.layout.activity_confirm);
 
 
 
-        btnConf = (Button) findViewById(R.id.button_what);
-        btnConf.setOnClickListener(new View.OnClickListener() {
+        btnWhat = (Button) findViewById(R.id.button_confirm);
+        btnWhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //다음 액티비티로 가는 것
                 //Intent
-                Intent intent = new Intent(WhatActivity.this, ConfirmActivity.class);
+                Intent intent = new Intent(ConfirmActivity.this, ChecklistActivity.class);
                 startActivity(intent);//다음 액티비티 화면에 출력
             }
         });

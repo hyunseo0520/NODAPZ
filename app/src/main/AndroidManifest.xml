@@ -29,6 +29,7 @@
         <activity android:name=".WhenActivity"/>
         <activity android:name=".WhoActivity"/>
         <activity android:name=".WhatActivity"/>
+        <activity android:name=".ConfirmActivity"/>
 
     </application>
 
