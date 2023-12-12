@@ -32,7 +32,7 @@ public class WhoActivity extends AppCompatActivity {
         button_decrease = findViewById(R.id.button_decrease);
         imageView_person = findViewById(R.id.imageView_person);
         btnWho = findViewById(R.id.button_who);
-        btnNext = findViewById(R.id.button_page);
+        btnNext = findViewById(R.id.button_next);
         btnNext.setEnabled(false); // 초기에 next 버튼 비활성화
 
         btnWho.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class WhoActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WhoActivity.this, ConfirmActivity.class);
+                Intent intent = new Intent(WhoActivity.this, ChecklistActivity.class);
                 startActivity(intent);
             }
         });

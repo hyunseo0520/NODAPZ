@@ -15,7 +15,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:text="준비물을 빼먹지 않도록,\n@@이 필수 아이템을 추천해드립니다!" />
+        android:text="준비물을 빼먹지 않도록,\n제가 필수 아이템을 추천해드립니다!" />
 
     <Button
         android:id="@+id/tripaddbutton"
