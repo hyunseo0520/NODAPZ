@@ -64,5 +64,5 @@
     <Button
         android:id="@+id/button_where"
         style="@style/button3"
-        android:text="go to when" />
+        android:text="Next Step" />
 </LinearLayout>
