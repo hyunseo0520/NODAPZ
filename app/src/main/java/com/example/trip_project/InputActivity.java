@@ -73,7 +73,6 @@ public class InputActivity extends AppCompatActivity {
                     Intent intent = new Intent();
                     intent.putExtra("inputCount", count);
                     setResult(WhoActivity.RESULT_CODE_INPUT, intent); // WhoActivity로 동승자 정보 개수 전달
-                    finish();
                 }
             }
         });
@@ -100,6 +99,7 @@ public class InputActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

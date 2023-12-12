@@ -6,18 +6,7 @@
     android:layout_marginTop="100dp"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_when"
-        android:layout_width="236dp"
-        android:layout_height="85dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="0dp"
-        android:backgroundTint="#4F86F7"
-        android:fontFamily="@font/jalnan"
-        android:text="다음 단계로 ➡️"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/page_when"
@@ -43,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:textSize="40dp"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="🛫️ 출발 날짜" />
 
         <RadioButton
@@ -52,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:textSize="40dp"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="🛬 도착 날짜" />
 
     </RadioGroup>
@@ -72,6 +61,7 @@
                 android:id="@+id/datePicker1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:layout_gravity="center"
                 android:datePickerMode="calendar"
                 android:gravity="center" />
@@ -81,6 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:calendarTextColor="@color/black"
                 android:datePickerMode="calendar"
                 android:gravity="center" />
         </FrameLayout>
@@ -103,7 +95,7 @@
             android:id="@+id/tvYear1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="0000"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -111,7 +103,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="년  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -120,7 +112,7 @@
             android:id="@+id/tvMonth1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="00"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -128,7 +120,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="월  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -137,7 +129,7 @@
             android:id="@+id/tvDay1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="00"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -145,7 +137,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="일  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -153,7 +145,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="~  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -162,7 +154,7 @@
             android:id="@+id/tvYear2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="0000"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -170,7 +162,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="년  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -179,7 +171,7 @@
             android:id="@+id/tvMonth2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="00"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -187,7 +179,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="월  "
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -196,7 +188,7 @@
             android:id="@+id/tvDay2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="00"
             android:textColor="@color/black"
             android:textSize="30dp" />
@@ -204,14 +196,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jalnan"
+            android:fontFamily="@font/kangwon"
             android:text="일  "
             android:textColor="@color/black"
             android:textSize="30dp" />
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/button_when"
+        style="@style/button3"
+        android:text="Next Step" />
 
 
 </LinearLayout>

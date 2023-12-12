@@ -1,10 +1,12 @@
 package com.example.trip_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.trip_project.hotel.Fragment1;
 import com.google.android.material.tabs.TabLayout;
 
 import org.jetbrains.annotations.Nullable;
