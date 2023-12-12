@@ -16,12 +16,11 @@
         android:src="@drawable/anggo" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_username"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:textSize="20dp"
-        android:gravity="center"
-        android:text="@string/nav_header_title" />
+        android:gravity="center" />
 
     <Button
         android:id="@+id/btnEditProfile"

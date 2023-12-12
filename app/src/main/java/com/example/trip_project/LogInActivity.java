@@ -31,6 +31,7 @@ public class LogInActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+
         editTextEmail = (EditText) findViewById(R.id.loginID);
         editTextPassword = (EditText) findViewById(R.id.loginPassword);
 
@@ -60,9 +61,11 @@ public class LogInActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    startActivity(new Intent(LogInActivity.this, MainActivity.class));
+                    Intent intent = new Intent(LogInActivity.this, MainActivity.class);
+                    startActivity(intent);
                     finish();
-                } else {
+                }
+                else {
                 }
             }
         };
