@@ -35,6 +35,7 @@
         <activity android:name=".EditActivity"/>
         <activity android:name=".hotel.DetailsActivity"/>
         <activity android:name=".hotel.WebActivity"/>
+        <activity android:name=".EditProfileActivity"/>
 
 
     </application>
