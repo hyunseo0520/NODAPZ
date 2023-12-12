@@ -1,24 +1,36 @@
 package com.example.trip_project;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment3 extends Fragment {
+public class Fragment3 extends Fragment{
 
+    Bitmap bitmap;
+    private Button button;
+
+    private ImageView fragmentImageView;
 
     public Fragment3() {
         // Required empty public constructor
@@ -28,19 +40,32 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
         // LayoutInflater 사용해 Resource Layout을 View로 변환해준 후 findViewById() 호출
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.tab_frame3, container, false);
 
-        // ListView 아이템에 표시될 사용자 테이터 정의
-        String[] menuItems = {"버전 정보", "이용 약관", "개인정보처리방침"};
+        fragmentImageView = view.findViewById(R.id.imageView2);
+        button = view.findViewById(R.id.btnEditProfile);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // EditProfileActivity로 이동하는 Intent 생성
+                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        ListView listView = (ListView) view.findViewById(R.id.mypageListview);
-        // 데이터 입력받을 Adapter 생성
-        // fragment에서는 'this' 사용이 불가하므로, Activity의 참조 획득이 가능한 getActivity()함수 사용
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, menuItems);
+        // EditProfileActivity에서 전달된 Uri를 받아서 ImageView에 설정
+        if (getArguments() != null) {
+            String imageUriString = getArguments().getString("imageUri");
+            if (imageUriString != null) {
+                Uri imageUri = Uri.parse(imageUriString);
+                fragmentImageView.setImageURI(imageUri);
+            }
+        }
 
-        listView.setAdapter(listViewAdapter);
+
 
         return view;
     }
