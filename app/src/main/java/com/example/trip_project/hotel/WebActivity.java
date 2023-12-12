@@ -1,9 +1,11 @@
 package com.example.trip_project.hotel;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -36,6 +38,18 @@ public class WebActivity extends AppCompatActivity {
         webView.getSettings().setDomStorageEnabled(true);  // 로컬 스토리지 (localStorage) 사용여부
 
         webView.loadUrl("https://www.google.co.kr/travel/hotels/%ED%94%8C%EB%A1%9C%EB%A0%8C%EC%8A%A4/entity/CgsI3Z-EmoqriN_3ARAB?utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CAAQ5JsGahcKEwi4vbbwuoqDAxUAAAAAHQAAAAAQBA&ts=CAEaIAoCGgASGhIUCgcI5w8QDBgOEgcI5w8QDBgPGAEyAhAAKgkKBToDS1JXGgA");
+
+        findViewById(R.id.back2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // DetailsActivity로 이동
+                Intent detailsIntent = new Intent(WebActivity.this, DetailsActivity.class);
+                startActivity(detailsIntent);
+            }
+        });
+
     }
+
+
 
 }

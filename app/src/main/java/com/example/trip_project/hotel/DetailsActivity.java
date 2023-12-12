@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
 import com.example.trip_project.R;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -22,6 +24,16 @@ public class DetailsActivity extends AppCompatActivity {
             String price = intent.getStringExtra("price");
             int imageResource = intent.getIntExtra("imageResource", 0);
         }
+
+        ImageView backButton = findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Fragment1로 이동하는 코드 추가
+                Intent fragmentIntent = new Intent(DetailsActivity.this, Fragment1.class);
+                startActivity(fragmentIntent);
+            }
+        });
 
         // 버튼 클릭 이벤트 처리
         Button startBookingButton = findViewById(R.id.button);

@@ -32,6 +32,7 @@
         <activity android:name=".ConfirmActivity"/>
         <activity android:name=".hotel.DetailsActivity"/>
         <activity android:name=".hotel.WebActivity"/>
+        <activity android:name=".hotel.Fragment1"/>
 
     </application>
 

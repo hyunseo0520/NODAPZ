@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/detailhotel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="417dp"
+        android:layout_height="343dp"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/hotel1" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,15 +34,16 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/kangwon"
         android:text="Hotel Calimala"
+        android:textStyle="bold"
         android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailhotel" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +57,8 @@
         android:layout_marginEnd="2dp"
         android:fontFamily="@font/kangwon"
         android:text="4.5"
-        android:textSize="11sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
@@ -69,7 +71,7 @@
         android:fontFamily="@font/kangwon"
         android:text="방문 가능 일자 :"
         android:textColor="#044363"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -81,6 +83,7 @@
         android:fontFamily="@font/kangwon"
         android:text="이용 금액 : "
         android:textColor="#044363"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -91,7 +94,7 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/kangwon"
         android:text="2024년 1월 4일"
-        android:textSize="12sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -103,27 +106,28 @@
         android:layout_marginStart="16dp"
         android:fontFamily="@font/kangwon"
         android:text="$3,00 - $8,00"
-        android:textSize="12sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
 
     <Button
         android:id="@+id/textView12"
-        android:layout_width="76dp"
-        android:layout_height="24dp"
+        android:layout_width="114dp"
+        android:layout_height="39dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/kangwon"
-        android:text="..."
-        android:textColor="@color/black"
         android:backgroundTint="@color/white"
+        android:fontFamily="@font/kangwon"
+        android:text="사진 더보기"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:scaleType="fitXY"
@@ -133,8 +137,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -144,8 +148,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
@@ -171,7 +175,9 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/book_button_bg"
         android:fontFamily="@font/kangwon"
-        android:text="More Information on WEB"
+        android:textStyle="bold"
+        android:text="호텔 정보 더보기"
+        android:textSize="25dp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
