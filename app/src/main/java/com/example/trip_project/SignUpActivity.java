@@ -59,7 +59,7 @@ public class SignUpActivity extends AppCompatActivity {
                             finish();
                         } else {
                             // 계정이 중복된 경우
-                            Toast.makeText(SignUpActivity.this, "이미 존재하는 계정입니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "비밀번호는 6자 이상 설정해주세요.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
