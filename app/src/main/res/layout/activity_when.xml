@@ -204,7 +204,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_where"
+        android:id="@+id/button_when"
         style="@style/button3"
         android:text="Next Step" />
 
