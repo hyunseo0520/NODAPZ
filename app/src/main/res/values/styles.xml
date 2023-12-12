@@ -95,14 +95,12 @@
     <style name="select">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:fontFamily">@font/jalnan</item>
         <item name="android:backgroundTint">#F8BBD0</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="type">
         <item name="android:textColor">@color/black</item>
-        <item name="android:paddingHorizontal">100dp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:textSize">25dp</item>
         <item name="android:backgroundTint">#F8BBD0</item>
