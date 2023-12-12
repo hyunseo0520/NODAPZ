@@ -4,21 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editText_name"
+    <TextView
+        android:id="@+id/page_what"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
-
-    <EditText
-        android:id="@+id/editText_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone"/>
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="30dp"
+        android:text="page_what" />
 
     <Button
-        android:id="@+id/button_submit"
+        android:id="@+id/button_what"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"/>
+        android:textSize="30dp"
+        android:text="go to confirm" />
 </LinearLayout>
