@@ -7,11 +7,13 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.tabs.TabLayout;
 
+import org.jetbrains.annotations.Nullable;
+
 public class MainActivity extends AppCompatActivity {
-    Fragment fragment1, fragment2, fragment3, fragment4;
+    Fragment fragment1, fragment2, fragment3;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
