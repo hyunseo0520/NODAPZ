@@ -13,10 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Trip_Project"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".LogInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,19 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChecklistActivity"/>
-        <activity android:name=".WhereActivity"/>
-        <activity android:name=".WhenActivity"/>
-        <activity android:name=".WhoActivity"/>
-        <activity android:name=".WhatActivity"/>
-        <activity android:name=".ConfirmActivity"/>
-        <activity android:name=".hotel.DetailsActivity"/>
-        <activity android:name=".hotel.WebActivity"/>
-        <activity android:name=".hotel.Fragment1"/>
-
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SignUpActivity"></activity>
     </application>
-
-
-
 
 </manifest>
