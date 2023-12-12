@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_vertical"
     tools:context=".WhoActivity">
 
     <TextView
@@ -56,16 +57,14 @@
         android:id="@+id/button_who"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_margin="20dp"
         android:text="여행자 정보 입력 및 확인하기"
         android:textSize="30dp" />
 
     <Button
         android:id="@+id/button_next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="다음 화면으로 넘어가기"
-        android:textSize="30dp" />
+        style="@style/button3"
+        android:text="Next Step" />
 
 </LinearLayout>
