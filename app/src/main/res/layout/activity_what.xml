@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/button_what"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="go to confirm" />
+
     <TextView
         android:id="@+id/page_what"
         android:layout_width="match_parent"
@@ -12,10 +19,5 @@
         android:textSize="30dp"
         android:text="page_what" />
 
-    <Button
-        android:id="@+id/button_what"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="go to confirm" />
+
 </LinearLayout>

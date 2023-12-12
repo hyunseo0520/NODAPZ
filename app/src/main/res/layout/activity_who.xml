@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".WhoActivity">
+    <Button
+        android:id="@+id/button_who"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="go to what"
+        android:textSize="30dp" />
+
 
     <TextView
         android:id="@+id/page_where"
@@ -119,12 +127,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_who"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="go to what"
-        android:textSize="30dp" />
 
 </LinearLayout>
