@@ -28,8 +28,9 @@
         <activity android:name=".WhereActivity"/>
         <activity android:name=".WhenActivity"/>
         <activity android:name=".WhoActivity"/>
-        <activity android:name=".WhatActivity"/>
         <activity android:name=".ConfirmActivity"/>
+        <activity android:name=".InputActivity"/>
+        <activity android:name=".EditActivity"/>
 
     </application>
 

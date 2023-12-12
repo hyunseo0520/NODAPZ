@@ -25,6 +25,8 @@ import java.util.List;
 
 public class WhereActivity extends AppCompatActivity {
 
+    public static Context WhereContext;
+
     Button btnWhere, btnSearch;
     Spinner countrySpinner;
     EditText etSearch;
@@ -64,6 +66,8 @@ public class WhereActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where);
         setTitle("여행 장소를 입력하세요!");
+
+        WhereContext = this;
 
         setupCountrySpinner();
         setupSearchButton();

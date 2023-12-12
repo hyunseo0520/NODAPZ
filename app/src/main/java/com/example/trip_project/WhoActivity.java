@@ -1,73 +1,50 @@
 package com.example.trip_project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
 public class WhoActivity extends AppCompatActivity {
+    public static Context WhoContext;
+    public static final int RESULT_CODE_INPUT = 2;
     private int number = 0;
     private TextView textView_number;
     private Button button_increase, button_decrease;
     private ImageView imageView_person;
-    Button btnWho;
-    private CheckBox checkbox_family, checkbox_friends, checkbox_colleague;
-    private TextView textView_categories;
-    private EditText editText_newCategory;
-    private Button button_addCategory;
-    private LinearLayout layout_categories;
-    private ArrayList<CheckBox> categoryCheckboxes;
+    private Button btnWho;
+    private Button button_next;
+
+    private static final int REQUEST_CODE_INPUT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_who);
 
+        WhoContext = this;
+
         textView_number = findViewById(R.id.textView_number);
         button_increase = findViewById(R.id.button_increase);
         button_decrease = findViewById(R.id.button_decrease);
         imageView_person = findViewById(R.id.imageView_person);
+        btnWho = findViewById(R.id.button_who);
+        button_next = findViewById(R.id.button_next);
+        button_next.setEnabled(false); // 초기에 next 버튼 비활성화
 
-        checkbox_family = findViewById(R.id.checkbox_family);
-        checkbox_friends = findViewById(R.id.checkbox_friends);
-        checkbox_colleague = findViewById(R.id.checkbox_colleague);
-
-        textView_categories = findViewById(R.id.textView_categories);
-        editText_newCategory = findViewById(R.id.editText_newCategory);
-        button_addCategory = findViewById(R.id.button_addCategory);
-        layout_categories = findViewById(R.id.layout_categories);
-
-        categoryCheckboxes = new ArrayList<>();
-        categoryCheckboxes.add(checkbox_family);
-        categoryCheckboxes.add(checkbox_friends);
-        categoryCheckboxes.add(checkbox_colleague);
-
-        button_addCategory.setOnClickListener(new View.OnClickListener() {
+        btnWho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addNewCategory(editText_newCategory.getText().toString());
-                editText_newCategory.setText("");
+                Intent intent = new Intent(WhoActivity.this, InputActivity.class);
+                intent.putExtra("number", number);
+                startActivityForResult(intent, REQUEST_CODE_INPUT); // InputActivity 시작
             }
         });
-        View.OnClickListener checkboxListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateCategories();
-            }
-        };
-
-        checkbox_family.setOnClickListener(checkboxListener);
-        checkbox_friends.setOnClickListener(checkboxListener);
-        checkbox_colleague.setOnClickListener(checkboxListener);
 
         button_increase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +54,7 @@ public class WhoActivity extends AppCompatActivity {
                     imageView_person.setImageResource(getResources().getIdentifier("person" + (number == 6 ? "6" : number), "drawable", getPackageName()));
                     textView_number.setText(number == 6 ? "6명 이상" : String.valueOf(number) + "명");
                 }
+                updateNextButton(); // 버튼 상태 업데이트
             }
         });
 
@@ -88,48 +66,39 @@ public class WhoActivity extends AppCompatActivity {
                     imageView_person.setImageResource(getResources().getIdentifier("person" + number, "drawable", getPackageName()));
                     textView_number.setText(number == 0 ? "0명" : String.valueOf(number) + "명");
                 }
+                updateNextButton(); // 버튼 상태 업데이트
             }
         });
 
-        // 액티비티가 시작될 때 인원 수를 0명으로 설정하고, person0.png 이미지를 보여줍니다.
         imageView_person.setImageResource(getResources().getIdentifier("person0", "drawable", getPackageName()));
-        textView_number.setText(String.valueOf(number)+"명");
+        textView_number.setText(String.valueOf(number) + "명");
 
-        btnWho = (Button) findViewById(R.id.button_who);
-        btnWho.setOnClickListener(new View.OnClickListener() {
+        button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //다음 액티비티로 가는 것
-                //Intent
-                Intent intent = new Intent(WhoActivity.this, WhatActivity.class);
-                startActivity(intent);//다음 액티비티 화면에 출력
+                Intent intent = new Intent(WhoActivity.this, ConfirmActivity.class);
+                startActivity(intent);
             }
         });
     }
-    private void addNewCategory(String category) {
-        CheckBox newCheckbox = new CheckBox(this);
-        newCheckbox.setText(category);
-        newCheckbox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateCategories();
-            }
-        });
 
-        layout_categories.addView(newCheckbox);
-        categoryCheckboxes.add(newCheckbox);
+    private void updateNextButton() {
+        if (number > 0) {
+            button_next.setEnabled(true); // 여행자 인원이 1명 이상이면 next 버튼 활성화
+        } else {
+            button_next.setEnabled(false); // 여행자 인원이 0명이면 next 버튼 비활성화
+        }
     }
 
-    private void updateCategories() {
-        StringBuilder categories = new StringBuilder();
-
-        for (CheckBox checkbox : categoryCheckboxes) {
-            if (checkbox.isChecked()) {
-                categories.append(checkbox.getText().toString()).append(" ");
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_INPUT && resultCode == RESULT_CODE_INPUT) {
+            if (data != null) {
+                int inputCount = data.getIntExtra("inputCount", 0);
+                if (inputCount < number) {
+                    button_next.setEnabled(false); // 입력된 동승자 정보의 개수가 선택한 인원보다 작을 경우 next 버튼 비활성화
+                }
             }
         }
-
-        TextView textView_categories = findViewById(R.id.textView_categories);
-        textView_categories.setText(categories.toString());
     }
 }
