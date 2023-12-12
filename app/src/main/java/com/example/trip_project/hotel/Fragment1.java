@@ -38,12 +38,12 @@ public class Fragment1 extends Fragment {
         setforyouRecycler(view, foryouDataList);
 
         List<topplacesData> topplacesDataList = new ArrayList<>();
-        topplacesDataList.add(new topplacesData("Hotel Calimala", "Italy", "From $400", R.drawable.hotel1));
-        topplacesDataList.add(new topplacesData("아르떼미데", "Italy", "From $350", R.drawable.hotel2));
-        topplacesDataList.add(new topplacesData("골뱅이 민박", "Italy", "From $180", R.drawable.hotel3));
-        topplacesDataList.add(new topplacesData("Nilgiri Hills", "Italy", "From $300", R.drawable.hotel4));
-        topplacesDataList.add(new topplacesData("Turin Hotel", "Italy", "From $200", R.drawable.hotel5));
-        topplacesDataList.add(new topplacesData("안티체 피겨", "Italy", "From $500", R.drawable.hotel6));
+        topplacesDataList.add(new topplacesData("이스트 마이애미", "Miami", "From $400", R.drawable.hotel7));
+        topplacesDataList.add(new topplacesData("더 미라지", "New York", "From $750", R.drawable.hotel8));
+        topplacesDataList.add(new topplacesData("아미아나 리조트", "Nha Trang Bay", "From $180", R.drawable.hotel9));
+        topplacesDataList.add(new topplacesData("Nilgiri Hills", "Seoul", "From $300", R.drawable.hotel10));
+        topplacesDataList.add(new topplacesData("멜리아 빈펄", "Italy", "From $200", R.drawable.hotel11));
+        topplacesDataList.add(new topplacesData("인터컨티넨탈", "Italy", "From $500", R.drawable.hotel12));
 
         settopplacesRecycler(view, topplacesDataList);
 

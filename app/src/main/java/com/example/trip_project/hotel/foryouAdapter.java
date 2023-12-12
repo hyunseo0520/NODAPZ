@@ -43,20 +43,9 @@ public class foryouAdapter extends RecyclerView.Adapter<foryouAdapter.foryouView
         holder.price.setText(foryouDataList.get(position).getPrice());
         holder.placeImage.setImageResource(foryouDataList.get(position).getImageUrl());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // 클릭한 아이템의 데이터를 가져오기
-                foryouData clickedItem = foryouDataList.get(holder.getAdapterPosition());
-
-                // Intent에 데이터를 추가하여 DetailsActivity로 전환
-                Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("hotelName", clickedItem.getPlaceName());
-                intent.putExtra("countryName", clickedItem.getCountryName());
-                intent.putExtra("price", clickedItem.getPrice());
-                intent.putExtra("imageResource", clickedItem.getImageUrl());
-                context.startActivity(intent);
-            }
+        holder.itemView.setOnClickListener(view -> {
+            Intent i=new Intent(context, DetailsActivity.class);
+            context.startActivity(i);
         });
 
     }

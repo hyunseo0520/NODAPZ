@@ -1,10 +1,10 @@
 package com.example.trip_project.hotel;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
+import android.widget.Button;
 import com.example.trip_project.R;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -21,9 +21,16 @@ public class DetailsActivity extends AppCompatActivity {
             String countryName = intent.getStringExtra("countryName");
             String price = intent.getStringExtra("price");
             int imageResource = intent.getIntExtra("imageResource", 0);
-
-            // 추출한 데이터를 사용하여 화면에 표시하거나 추가적인 작업 수행
-            // 예: TextView 등에 데이터 설정
         }
+
+        // 버튼 클릭 이벤트 처리
+        Button startBookingButton = findViewById(R.id.button);
+        startBookingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent bookingIntent = new Intent(DetailsActivity.this, WebActivity.class);
+                startActivity(bookingIntent);
+            }
+        });
     }
 }
