@@ -46,7 +46,7 @@ public class LogInActivity extends AppCompatActivity {
 
         buttonLogIn = (Button) findViewById(R.id.btnLogIn);
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
-            @Override
+                @Override
             public void onClick(View v) {
                 if (!editTextEmail.getText().toString().equals("") && !editTextPassword.getText().toString().equals("")) {
                     loginUser(editTextEmail.getText().toString(), editTextPassword.getText().toString());
