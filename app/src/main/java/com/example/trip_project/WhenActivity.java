@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WhenActivity extends AppCompatActivity {
-    //Context로 다음 액티비티에서 정보 사용
+    //Context로 다음 액티비티에서 정용보 사용
     public static Context WhenContext;
 
     RadioButton rdoStartCal, rdoEndCal;

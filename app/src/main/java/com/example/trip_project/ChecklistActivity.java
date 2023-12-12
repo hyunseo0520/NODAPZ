@@ -1,6 +1,7 @@
 package com.example.trip_project;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class ChecklistActivity extends AppCompatActivity {
     private Spinner spinnerTravelLocation;
     private Spinner spinnerTravelType;
     private ListView listViewRecommendations;
-    private Button buttonAddItem;
+    private Button buttonAddItem, btnHome;
     private List<String> travelTypes;
     private boolean[] checkedTravelTypes;
 
@@ -73,6 +74,18 @@ public class ChecklistActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
+        btnHome = findViewById(R.id.button_home);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //다음 액티비티로 가는 것
+                //Intent
+                Intent intent = new Intent(ChecklistActivity.this, MainActivity.class);
+                startActivity(intent);//다음 액티비티 화면에 출력
+            }
+        });
+
     }
 
     private void showRecommendations() {

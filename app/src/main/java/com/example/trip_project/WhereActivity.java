@@ -24,7 +24,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class WhereActivity extends AppCompatActivity {
-
     public static Context WhereContext;
 
     Button btnWhere, btnSearch;

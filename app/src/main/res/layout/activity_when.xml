@@ -6,18 +6,7 @@
     android:layout_marginTop="100dp"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_when"
-        android:layout_width="236dp"
-        android:layout_height="85dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="0dp"
-        android:backgroundTint="#4F86F7"
-        android:fontFamily="@font/kangwon"
-        android:text="다음 단계로 ➡️"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/page_when"
@@ -72,6 +61,7 @@
                 android:id="@+id/datePicker1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
                 android:layout_gravity="center"
                 android:datePickerMode="calendar"
                 android:gravity="center" />
@@ -81,6 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:calendarTextColor="@color/black"
                 android:datePickerMode="calendar"
                 android:gravity="center" />
         </FrameLayout>
@@ -211,7 +203,10 @@
 
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/button_when"
+        style="@style/button3"
+        android:text="Next Step" />
 
 
 </LinearLayout>

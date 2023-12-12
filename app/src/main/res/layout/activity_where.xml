@@ -3,12 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:layout_marginTop="130dp"
+    android:layout_marginTop="130dp"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/button_where"
-        style="@style/button3"
-        android:text="go to when" />
 
     <TextView
         android:id="@+id/page_where"
@@ -63,7 +59,10 @@ android:layout_marginTop="130dp"
             android:inputType="text"
             android:hint="도시를 입력하세요." />
 
+
     </LinearLayout>
-
-
+    <Button
+        android:id="@+id/button_where"
+        style="@style/button3"
+        android:text="Next Step" />
 </LinearLayout>
