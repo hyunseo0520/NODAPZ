@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
 android:layout_marginTop="130dp"
     android:orientation="vertical">
+    <Button
+        android:id="@+id/button_where"
+        style="@style/button3"
+        android:text="go to when" />
 
     <TextView
         android:id="@+id/page_where"
@@ -61,8 +65,5 @@ android:layout_marginTop="130dp"
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_where"
-        style="@style/button3"
-        android:text="go to when" />
+
 </LinearLayout>
