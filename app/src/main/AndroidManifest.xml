@@ -26,6 +26,17 @@
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".ChecklistActivity"/>
+        <activity android:name=".WhereActivity"/>
+        <activity android:name=".WhenActivity"/>
+        <activity android:name=".WhoActivity"/>
+        <activity android:name=".ConfirmActivity"/>
+        <activity android:name=".InputActivity"/>
+        <activity android:name=".EditActivity"/>
+        <activity android:name=".hotel.DetailsActivity"/>
+        <activity android:name=".hotel.WebActivity"/>
+
+
     </application>
 
 </manifest>
