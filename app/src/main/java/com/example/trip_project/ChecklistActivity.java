@@ -40,7 +40,7 @@ public class ChecklistActivity extends AppCompatActivity {
         listViewRecommendations = findViewById(R.id.listViewRecommendations);
         buttonAddItem = findViewById(R.id.buttonAddItem);
 
-        travelTypes = Arrays.asList("국내여행", "해외여행", "액티비티");
+        travelTypes = Arrays.asList("국내여행", "해외여행", "액티비티", "낭만", "전자기기", "세면용품", "기타", "우정");
         checkedTravelTypes = new boolean[travelTypes.size()];
 
         buttonAddItem.setOnClickListener(new View.OnClickListener() {
@@ -94,12 +94,27 @@ public class ChecklistActivity extends AppCompatActivity {
         for (int i = 0; i < travelTypes.size(); i++) {
             if (checkedTravelTypes[i]) {
                 if (travelTypes.get(i).equals("국내여행")) {
-                    recommendations.addAll(Arrays.asList("여권", "지도", "현금", "핸드폰 충전기"));
+                    recommendations.addAll(Arrays.asList("국내신분증", "국내운전면허증", "여행지 결정", "숙소", "지갑"));
                 } else if (travelTypes.get(i).equals("해외여행")) {
-                    recommendations.addAll(Arrays.asList("여권", "지도", "외국 화폐", "어댑터"));
+                    recommendations.addAll(Arrays.asList("비자", "세금(택스) 관련 서류", "국제운전면허증", "여권", "바우처", "숙소", "지갑", "환전한 돈"));
                 } else if (travelTypes.get(i).equals("액티비티")) {
-                    recommendations.addAll(Arrays.asList("여권", "운동화", "수영복", "카메라"));
+                    recommendations.addAll(Arrays.asList("운동화", "수건", "에너지드링크", "액션캠", "수건", "관절보호대"));
+                } else if (travelTypes.get(i).equals("낭만")) {
+                    recommendations.addAll(Arrays.asList("카메라", "필름", "녹음기", "스케치북", "이어폰", "선글라스"));
+                } else if (travelTypes.get(i).equals("전자기기")) {
+                    recommendations.addAll(Arrays.asList("노트북", "태블릿PC", "노트북 충전기", "태블릿PC 충전기"));
+                } else if (travelTypes.get(i).equals("세면용품")) {
+                    recommendations.addAll(Arrays.asList("클렌징폼", "치약", "칫솔", "에센스", "로션", "화장솜"));
+                } else if (travelTypes.get(i).equals("우정")) {
+                    recommendations.addAll(Arrays.asList("보드게임", "편지지", "불멍가루", "필름카메라", "간식", "친구"));
+                } else if (travelTypes.get(i).equals("바다")) {
+                    recommendations.addAll(Arrays.asList("샤워용품", "물안경", "여분의 옷", "선글라스", "썬크림", "파라솔", "돗자리"));
+                } else if (travelTypes.get(i).equals("산")) {
+                    recommendations.addAll(Arrays.asList("챙모자", "선글라스", "썬크림", "지팡이", "벌레퇴치제", "백팩", "물", "상비약"));
+                } else if (travelTypes.get(i).equals("기타")) {
+                    recommendations.addAll(Arrays.asList("압축용팩", "비닐봉투", "핸드크림", "가글", "미스트", "백팩"));
                 }
+
             }
         }
 
